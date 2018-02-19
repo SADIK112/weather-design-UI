@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">  
+        <title>Weather Card UI</title>
+        
+    </head>
+
+    <body>    
+        <div class="card">
+            <div class="front active" id="info-front">
+                <div class="location">Bangladesh</div>
+                
+                <div class="more" id="info-item"><i class="fa fa-info-circle" aria-hidden="true"></i></div>
+                <div class="weather">
+                    <i class="fa fa-cloud" aria-hidden="true"></i>
+                    <h1>8<sup>o</sup><br><span>Today</span></h1>
+                </div>
+                
+                <ul class="forecast">
+                    <li>
+                        <div class="day">Sunday</div>
+                        <div class="temperature"><i class="fa fa-cloud" aria-hidden="true"></i> 9<sup>o</sup></div>
+                    </li>
+                    
+                    <li>
+                        <div class="day">Monday</div>
+                        <div class="temperature"><i class="fa fa-tint" aria-hidden="true"></i> 6<sup>o</sup></div>
+                    </li>
+                    
+                    <li>
+                        <div class="day">Tuesday</div>
+                        <div class="temperature"><i class="fa fa-snowflake-o" aria-hidden="true"></i> 3<sup>o</sup></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="back" id="back-info">
+                <div class="go-back" id="back-icon"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></div>
+                
+                <ul class="forecast">
+                    
+                    <li>
+                        <div class="day">Today</div>
+                        <div class="temperature"><i class="fa fa-cloud" aria-hidden="true"></i> 3<sup>o</sup></div>
+                    </li>
+                        
+                    <li>
+                        <div class="day">Yesterday</div>
+                        <div class="temperature"><i class="fa fa-tint" aria-hidden="true"></i> 5<sup>o</sup></div>
+                    </li>
+                        
+                    <li>
+                        <div class="day">Sunday</div>
+                        <div class="temperature"><i class="fa fa-cloud" aria-hidden="true"></i> 9<sup>o</sup></div>
+                    </li>
+
+                    <li>
+                        <div class="day">Monday</div>
+                        <div class="temperature"><i class="fa fa-tint" aria-hidden="true"></i> 6<sup>o</sup></div>
+                    </li>
+
+                    <li>
+                        <div class="day">Tuesday</div>
+                        <div class="temperature"><i class="fa fa-snowflake-o" aria-hidden="true"></i> 3<sup>o</sup></div>
+                    </li>
+                    
+                    <li>
+                        <div class="day">Wednesday</div>
+                        <div class="temperature"><i class="fa fa-tint" aria-hidden="true"></i> 3<sup>o</sup></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <script>
+            var weatherInfo = document.getElementById('info-item');
+            weatherInfo.onclick = function(){
+                var infoBack = document.getElementById('back-info');
+                infoBack.classList.add("active");
+                var infoFront = document.getElementById('info-front');
+                infoFront.classList.remove('active');
+            }
+            var backIcon = document.getElementById('back-icon');
+            backIcon.onclick = function(){
+                var infoBack = document.getElementById('back-info');
+                infoBack.classList.remove("active");
+                var infoFront = document.getElementById('info-front');
+                infoFront.classList.add('active');
+            }
+        </script>>
+    </body>
+</html>
